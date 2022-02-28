@@ -1,0 +1,86 @@
+*,::after,::before{box-sizing:border-box}blockquote,body,dd,dl,figure,h1,h2,h3,h4,p{margin:0}ol[role=list],ul[role=list]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,::after,::before{animation-duration:0s!important;animation-iteration-count:1!important;transition-duration:0s!important;scroll-behavior:auto!important}}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--DarkBlue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+main {
+  background-color: var(--DarkGrayishBlue);
+  max-width: 490px;
+  padding: 45px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.title {
+  color: var(--NeonGreen);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.quote {
+  color: var(--LightCyan);
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 376px) {
+  .mobile-divider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .desktop-divider {
+    display: none;
+  }
+}
+
+#btn {
+  position: absolute;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: var(--NeonGreen);
+  border: none;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#btn:hover {
+  box-shadow: 0px 0px 40px 5px var(--NeonGreen);
+}
